@@ -15,7 +15,7 @@ function Landing() {
 
   return (
     <>
-      <div className="h-screen flex flex-col">
+      <div className=" flex flex-col">
         <div className="mt-0 w-screen h-20  bg-[#878787]">
           <img src={qLogo} alt="" className={`absolute -mt-24 w-[400px] animate-fade-up`} />
         </div>
@@ -23,7 +23,7 @@ function Landing() {
         <div className="w-screen flex justify-center animate-fade-up animate-delay-500">
           {show && <h1 className="font-noto text-xl m-4 text-[#142F55] ">{data.typeForm.title}</h1>}
         </div>
-        <div className="flex h-[380px] flex-col md:flex-row justify-center items-center animate-fade-up animate-delay-500">
+        <div className="flex gap-5 flex-col md:flex-row justify-center items-center animate-fade-up animate-delay-500">
           <Scatter
             data={data}
             setData={setData}
@@ -36,7 +36,7 @@ function Landing() {
             show={show}
             setShow={setShow}
           />
-          {/* <Bars
+          <Bars
             data={data}
             setData={setData}
             comp1={comp1}
@@ -47,11 +47,11 @@ function Landing() {
             setScores={setScores}
             show={show}
             setShow={setShow}
-          /> */}
+          />
           {/* {show && <img className="w-[300px] m-2" src={data.typeForm.welcome_screens[0].attachment.href} alt="" />} */}
         </div>
         <div className="mt-20 h-1 w-screen bg-[#FDB517] "></div>
-        <div className=" bg-[#878787]  flex  w-screen flex-grow "></div>
+        <div className=" bg-[#878787]  flex min-h-[100px] w-screen flex-grow "></div>
       </div>
     </>
   );
